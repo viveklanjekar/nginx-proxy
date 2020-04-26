@@ -6,9 +6,7 @@ RUN apk add --no-cache --update \
 RUN rm -f /etc/nginx/conf.d/*
 
 ENV SERVER_NAME example.com
-ENV PORT 80
-ENV CLIENT_MAX_BODY_SIZE 1m
-ENV PROXY_READ_TIMEOUT 60s
+ENV PORT 8080
 ENV WORKER_PROCESSES auto
 
 COPY files/run.sh /
