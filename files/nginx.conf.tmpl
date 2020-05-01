@@ -20,9 +20,9 @@ http {
       resolver 8.8.8.8 ipv6=off;
       resolver_timeout 3s;
       proxy_set_header Host kibana01.azr.grabpay.com;
-      proxy_http_version 1.1;
-      proxy_set_header Upgrade $http_upgrade;
-      proxy_set_header Connection "Upgrade";
+#      proxy_http_version 1.1;
+#      proxy_set_header Upgrade $http_upgrade;
+#      proxy_set_header Connection "Upgrade";
       set $upstream_endpoint ##PROXY_PASS##;
       proxy_pass $upstream_endpoint$request_uri;
     }
